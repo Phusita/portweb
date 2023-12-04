@@ -1,0 +1,203 @@
+body {
+  background-color: rgba(238, 225, 213, 1);
+  margin-bottom: 100px;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding:30px 50px 0px 100px ;  
+}
+
+p {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu div img {
+  width: 60px;
+  border-radius: 100%;
+  transition: transform 0.57s;
+}
+
+.menu div img:hover,
+.menu div img:active
+{
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.contact,
+.aboutus,
+.home
+ {
+  margin-left: 35px;
+  margin-right:5px ;
+  position: relative;
+}
+.aboutus .tooltip,
+.contact .tooltip,
+.home .tooltip
+{
+  position: absolute;
+  background-color: gray;
+  color:white;
+  padding-top:3.5px;
+  padding-bottom:5px;
+  padding-right:8px;
+  padding-left:8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: 'Exo 2', sans-serif;
+  bottom: -28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;   
+  white-space: nowrap;
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+.aboutus:hover  .tooltip,
+.contact:hover .tooltip,
+.home:hover .tooltip,
+.aboutus:active  .tooltip,
+.contact:active .tooltip,
+.home:active .tooltip
+{
+  opacity: 1;
+}
+
+p {
+  font-family: 'Exo 2', sans-serif;
+
+}
+.welcome-text {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+.text {
+  color: rgb(100, 78, 58);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 3px solid rgb(165, 136, 110);
+}
+
+.text p {
+  font-size:clamp(24px,4.5vw,56px);
+}
+
+main {
+  margin-left: 35px;  
+  margin-right: 35PX;
+  margin-top: 20px;
+}
+
+
+.picture {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 3vw;
+  row-gap: 6vw;
+}
+.picture img {
+  width: 100%;
+  border-radius: 2cap;
+  box-shadow: 4px 3px 1.5px 0px rgba(0, 0, 0, 0.3);
+}
+.intro {
+  display: flex;
+  margin-bottom: 50px ;
+  justify-content: center;
+}
+.intro p {
+  font-size: clamp(15px, 2vw , 24px);
+  color: rgb(99, 74, 49);
+  font-weight: 600;
+}
+
+
+
+@media  (max-width: 425px) {
+  .welcome-text {
+    justify-content: center;
+  }
+  nav {
+    padding-top:15px;
+    padding-right: 10px;  
+  }
+  .menu div img {
+    width: 50px;
+   
+  }
+
+  .contact,
+.aboutus,
+.home {
+  margin-left: 20px;
+
+}
+
+.picture {
+  grid-template-columns: 1fr;
+  grid-template-rows:repeat(10,1fr) ;
+  row-gap: 50px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width:426px) and (max-width: 751px) {
+
+  nav {
+    padding-top:15px;
+    padding-right: 10px;  
+  }
+  .menu div img {
+    width: 50px;
+   
+  }
+
+  .contact,
+.aboutus,
+.home {
+  margin-left: 20px;
+
+}
+.picture {
+  grid-template-columns: 1fr;
+  grid-template-rows:repeat(10,1fr) ;
+  row-gap: 10vw;
+}
+}
+
+@media (min-width:751px) and (max-width:1023px)
+{
+
+  nav {
+    
+    padding-right: 40px;  
+  }
+  .menu div img {
+    width: 50px;
+  }
+  .contact,
+  .aboutus {
+    margin-left: 25px;
+  }
+
+
+
+  
+}
